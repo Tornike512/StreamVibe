@@ -4,7 +4,7 @@ import bellIcon from "src/assets/bell-icon.png";
 
 export function Header() {
   return (
-    <header className="flex">
+    <header className="flex bg-slate-600">
       <img src={streamVibeLogo} alt="StreamVibe Logo" />
       <nav>
         <a href="#">Home</a>
