@@ -1,7 +1,10 @@
+import homeHeaderMainImage from "src/assets/home-header-main-image.png";
+import startWatching from "src/assets/start-watching-icon.svg";
+
 export function HomeHeader() {
   return (
     <section>
-      <img src="" alt="Header Movies Images" />
+      <img src={homeHeaderMainImage} alt="Header Movies Images" />
       <div>
         <h1>The Best Streaming Experience</h1>
         <p>
@@ -13,7 +16,7 @@ export function HomeHeader() {
           want to watch.
         </p>
         <button>
-          <img src="" alt="Start Watching Button Logo" />
+          <img src={startWatching} alt="Start Watching Button icon" />
           Start Watching Now
         </button>
       </div>
