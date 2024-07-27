@@ -1,9 +1,10 @@
+import { Slider } from "src/components/Slider";
 import { SliderButtons } from "src/components/SliderButtons";
 
 export function ExploreCategory() {
   return (
     <section className="max-w-[1920px] w-full">
-      <ul className="flex justify-between">
+      <ul className="flex justify-between mb-[80px]">
         <li>
           <h2 className="text-[#ffffff] text-[38px] font-bold mb-[14px]">
             Explore our wide variety of categories
@@ -15,15 +16,7 @@ export function ExploreCategory() {
         </li>
         <SliderButtons />
       </ul>
-      <ul>
-        <li>
-          <img src="" alt="Movies Images" />
-          <figure>
-            <figcaption>Action</figcaption>
-            <img src="" alt="right arrow" />
-          </figure>
-        </li>
-      </ul>
+      <Slider />
     </section>
   );
 }
