@@ -4,7 +4,7 @@ import bellIcon from "src/assets/bell-icon.png";
 
 export function Header() {
   return (
-    <header className="h-[120px] flex justify-center bg-slate-600">
+    <header className="h-[120px] flex justify-center">
       <div className="max-w-[1920px] px-[162px] w-full flex justify-between items-center">
         <img
           className="cursor-pointer"

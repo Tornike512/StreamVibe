@@ -2,7 +2,7 @@ import { HomeHeader } from "./HomeHeader";
 
 export function HomePage() {
   return (
-    <main>
+    <main className="flex justify-center">
       <HomeHeader />
     </main>
   );
