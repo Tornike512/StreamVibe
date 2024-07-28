@@ -3,3 +3,8 @@ export interface TGetMovies {
   genre: string;
   image: string;
 }
+
+export interface TSlideTypes {
+  leftSlide: number;
+  rightSlide: number;
+}

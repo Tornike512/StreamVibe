@@ -8,10 +8,12 @@ export function useGetMovies() {
 
   async function getMovies() {
     try {
-      const response = await axios.get("http://localhost:3000/movies");
-      setMovies(response.data.movies);
+      const response = await axios.post("http://localhost:3000/graphql", {
+        query: "{ movie { id genre image} }",
+      });
+      setMovies(response.data.data.movie);
     } catch (error) {
-      console.log("Error Loading Movies");
+      console.log("Error Loading Movies", error);
     }
   }
 

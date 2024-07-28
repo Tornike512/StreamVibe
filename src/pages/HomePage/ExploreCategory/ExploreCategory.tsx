@@ -1,7 +1,11 @@
+import { useState } from "react";
 import { Slider } from "src/components/Slider";
 import { SliderButtons } from "src/components/SliderButtons";
 
 export function ExploreCategory() {
+  const [leftSlide, setLeftSlide] = useState<number>(0);
+  const [rightSlide, setRightSlide] = useState<number>(5);
+
   return (
     <section className="max-w-[1920px] w-full mb-[150px]">
       <ul className="flex justify-between mb-[80px]">
@@ -16,7 +20,7 @@ export function ExploreCategory() {
         </li>
         <SliderButtons />
       </ul>
-      <Slider />
+      <Slider leftSlide={leftSlide} rightSlide={rightSlide} />
     </section>
   );
 }

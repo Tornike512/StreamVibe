@@ -1,44 +1,35 @@
-import moviesGrid from "src/assets/movies-grid.png";
+import { useGetMovies } from "src/Hooks/useGetMovies";
+
+import { TSlideTypes } from "src/types/Types";
 import rightArrow from "src/assets/right-arrow.png";
 
-export function Slider() {
+export function Slider({ rightSlide, leftSlide }: TSlideTypes) {
+  const { movies } = useGetMovies();
+
+  const slide = movies.slice(leftSlide, rightSlide);
+
   return (
-    <ul className="grid grid-cols-[1fr_1fr_1fr_1fr_1fr] gap-x-[30px]">
-      <li className="p-[30px] bg-[#262626] w-full rounded-[12px] cursor-pointer flex flex-col">
-        <img src={moviesGrid} alt="Movies Images" />
-        <figure className="flex justify-between mt-[5px]">
-          <figcaption className="text-[22px] text-[#ffffff]">Action</figcaption>
-          <img src={rightArrow} alt="Right Arrow Icon" />
-        </figure>
-      </li>
-      <li className="p-[30px] bg-[#262626] w-full rounded-[12px] cursor-pointer flex flex-col">
-        <img src={moviesGrid} alt="Movies Images" />
-        <figure className="flex justify-between mt-[5px]">
-          <figcaption className="text-[22px] text-[#ffffff]">Action</figcaption>
-          <img src={rightArrow} alt="Right Arrow Icon" />
-        </figure>
-      </li>
-      <li className="p-[30px] bg-[#262626] w-full rounded-[12px] cursor-pointer flex flex-col">
-        <img src={moviesGrid} alt="Movies Images" />
-        <figure className="flex justify-between mt-[5px]">
-          <figcaption className="text-[22px] text-[#ffffff]">Action</figcaption>
-          <img src={rightArrow} alt="Right Arrow Icon" />
-        </figure>
-      </li>
-      <li className="p-[30px] bg-[#262626] w-full rounded-[12px] cursor-pointer flex flex-col">
-        <img src={moviesGrid} alt="Movies Images" />
-        <figure className="flex justify-between mt-[5px]">
-          <figcaption className="text-[22px] text-[#ffffff]">Action</figcaption>
-          <img src={rightArrow} alt="Right Arrow Icon" />
-        </figure>
-      </li>
-      <li className="p-[30px] bg-[#262626] w-full rounded-[12px] cursor-pointer flex flex-col">
-        <img src={moviesGrid} alt="Movies Images" />
-        <figure className="flex justify-between mt-[5px]">
-          <figcaption className="text-[22px] text-[#ffffff]">Action</figcaption>
-          <img src={rightArrow} alt="Right Arrow Icon" />
-        </figure>
-      </li>
+    <ul className="grid grid-cols-[20%_20%_20%_20%_20%] gap-x-[30px] w-[93%]">
+      {slide.map((movie) => {
+        return (
+          <li
+            key={movie.id}
+            className="p-[30px] bg-[#262626] h-[370px] rounded-[12px] cursor-pointer flex flex-col"
+          >
+            <img
+              className="h-[88%] object-cover rounded-[10px]"
+              src={movie.image}
+              alt="Movies Images"
+            />
+            <figure className="flex justify-between mt-[5px]">
+              <figcaption className="text-[22px] text-[#ffffff]">
+                {movie.genre}
+              </figcaption>
+              <img src={rightArrow} alt="Right Arrow Icon" />
+            </figure>
+          </li>
+        );
+      })}
     </ul>
   );
 }
