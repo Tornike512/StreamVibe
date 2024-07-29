@@ -1,16 +1,13 @@
 import { useGetMovies } from "src/Hooks/useGetMovies";
 
-import { TSlideTypes } from "src/types/Types";
 import rightArrow from "src/assets/right-arrow.png";
 
-export function Slider({ rightSlide, leftSlide }: TSlideTypes) {
+export function Slider() {
   const { movies } = useGetMovies();
-
-  const slide = movies.slice(leftSlide, rightSlide);
 
   return (
     <ul className="grid grid-cols-[20%_20%_20%_20%_20%] gap-x-[30px] w-[93%]">
-      {slide.map((movie) => {
+      {movies.map((movie) => {
         return (
           <li
             key={movie.id}

@@ -1,11 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-// ...
+import slideReducer from "src/Features/SwitchSlider";
 
 export const store = configureStore({
   reducer: {
-    posts: postsReducer,
-    comments: commentsReducer,
-    users: usersReducer,
+    slide: slideReducer,
   },
 });
 
