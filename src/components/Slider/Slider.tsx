@@ -1,12 +1,17 @@
 import { useGetMovies } from "src/Hooks/useGetMovies";
+import { useSelector } from "react-redux";
+import { RootState } from "src/Redux/store";
 
 import rightArrow from "src/assets/right-arrow.png";
 
 export function Slider() {
   const { movies } = useGetMovies();
 
+  const leftSlide = useSelector((state: RootState) => state.slide.leftSlide);
+  const rightSlide = useSelector((state: RootState) => state.slide.rightSlide);
+
   return (
-    <ul className="grid grid-cols-[20%_20%_20%_20%_20%] gap-x-[30px] w-[93%]">
+    <ul className="w-[304%] relative left-[0%] grid grid-cols-[repeat(20,5%)] gap-x-[30px]">
       {movies.map((movie) => {
         return (
           <li

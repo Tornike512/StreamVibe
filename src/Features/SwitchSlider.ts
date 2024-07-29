@@ -17,9 +17,11 @@ export const slideSlice = createSlice({
   reducers: {
     slideLeft: (state) => {
       state.leftSlide -= 5;
+      state.rightSlide -= 5;
     },
     slideRight: (state) => {
       state.rightSlide += 5;
+      state.leftSlide += 5;
     },
   },
 });
