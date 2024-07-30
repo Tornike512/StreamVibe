@@ -9,11 +9,9 @@ export function Slider() {
 
   const slide = useSelector((state: RootState) => state.slide.slide);
 
-  console.log(slide);
-
   return (
     <ul
-      className={`w-[374%] relative  grid grid-cols-[repeat(20,5%)] gap-x-[30px]`}
+      className={`w-[374%] relative  grid grid-cols-[repeat(20,5%)] gap-x-[30px] transition-[left] duration-[0.5s] ease-[ease] delay-[0s]`}
       style={{ left: `${slide}%` }}
     >
       {movies.map((movie) => {
