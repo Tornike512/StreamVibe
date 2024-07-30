@@ -1,4 +1,5 @@
 import { ExploreCategory } from "./ExploreCategory";
+import { FAQSection } from "./FAQSection";
 import { HomeHeader } from "./HomeHeader";
 import { StreamSection } from "./StreamSection";
 
@@ -8,6 +9,7 @@ export function HomePage() {
       <HomeHeader />
       <ExploreCategory />
       <StreamSection />
+      <FAQSection />
     </main>
   );
 }
