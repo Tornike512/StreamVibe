@@ -7,11 +7,13 @@ import rightArrow from "src/assets/right-arrow.png";
 export function Slider() {
   const { movies } = useGetMovies();
 
-  const leftSlide = useSelector((state: RootState) => state.slide.leftSlide);
-  const rightSlide = useSelector((state: RootState) => state.slide.rightSlide);
+  const slide = useSelector((state: RootState) => state.slide.slide);
 
   return (
-    <ul className="w-[304%] relative left-[0%] grid grid-cols-[repeat(20,5%)] gap-x-[30px]">
+    <ul
+      className={`w-[374%] relative  grid grid-cols-[repeat(20,5%)] gap-x-[30px]`}
+      style={{ left: `${slide}%` }}
+    >
       {movies.map((movie) => {
         return (
           <li

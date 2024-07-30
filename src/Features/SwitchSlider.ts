@@ -2,13 +2,11 @@ import { createSlice } from "@reduxjs/toolkit";
 import type { RootState } from "src/Redux/store";
 
 interface slideState {
-  leftSlide: number;
-  rightSlide: number;
+  slide: number;
 }
 
 const initialState: slideState = {
-  leftSlide: 0,
-  rightSlide: 5,
+  slide: 0,
 };
 
 export const slideSlice = createSlice({
@@ -16,19 +14,16 @@ export const slideSlice = createSlice({
   initialState,
   reducers: {
     slideLeft: (state) => {
-      state.leftSlide -= 5;
-      state.rightSlide -= 5;
+      state.slide -= 101;
     },
     slideRight: (state) => {
-      state.rightSlide += 5;
-      state.leftSlide += 5;
+      state.slide += 101;
     },
   },
 });
 
 export const { slideLeft, slideRight } = slideSlice.actions;
 
-export const selectLeftSlide = (state: RootState) => state.slide.leftSlide;
-export const selectRightSlide = (state: RootState) => state.slide.rightSlide;
+export const selectLeftSlide = (state: RootState) => state.slide.slide;
 
 export default slideSlice.reducer;
