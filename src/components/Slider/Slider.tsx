@@ -9,6 +9,8 @@ export function Slider() {
 
   const slide = useSelector((state: RootState) => state.slide.slide);
 
+  console.log(slide);
+
   return (
     <ul
       className={`w-[374%] relative  grid grid-cols-[repeat(20,5%)] gap-x-[30px]`}
