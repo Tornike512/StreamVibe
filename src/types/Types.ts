@@ -10,6 +10,12 @@ export interface TGetStreams {
   image: string;
 }
 
+export interface TGetFaq {
+  id: string;
+  faq: string;
+  faqNum: string;
+}
+
 export interface TSlideTypes {
   leftSlide: number;
   rightSlide: number;
