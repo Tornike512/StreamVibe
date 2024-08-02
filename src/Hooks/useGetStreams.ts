@@ -13,7 +13,7 @@ export function useGetStreams() {
       });
       setStreams(response.data.data.stream);
     } catch (error) {
-      console.log("Error Loading Movies", error);
+      console.log("Error Loading Streams", error);
     }
   }
 

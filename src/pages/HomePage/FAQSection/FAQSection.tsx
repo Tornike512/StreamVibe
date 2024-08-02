@@ -1,4 +1,8 @@
+import { useGetFaq } from "src/Hooks/useGetFaq";
+
 export function FAQSection() {
+  const { faq } = useGetFaq();
+
   return (
     <section>
       <div>
@@ -12,10 +16,14 @@ export function FAQSection() {
         <button>Ask a Question</button>
       </div>
       <ul>
-        <li>
-          <button>01</button>
-          <h3>What is StreamVibe?</h3>
-        </li>
+        {faq.map((question) => {
+          return (
+            <li key={question.id}>
+              <button>{question.faqNum}</button>
+              <h3>{question.faq}</h3>
+            </li>
+          );
+        })}
       </ul>
     </section>
   );

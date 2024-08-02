@@ -3,7 +3,7 @@ import { TGetFaq } from "src/types/Types";
 
 import axios from "axios";
 
-export function useGetMovies() {
+export function useGetFaq() {
   const [faq, setFaq] = useState<TGetFaq[]>([]);
 
   async function getFaq() {
@@ -13,7 +13,7 @@ export function useGetMovies() {
       });
       setFaq(response.data.data.movie);
     } catch (error) {
-      console.log("Error Loading Movies", error);
+      console.log("Error Loading Frequently Asked Questions", error);
     }
   }
 
