@@ -11,7 +11,7 @@ export function useGetFaq() {
       const response = await axios.post("http://localhost:3000/graphql", {
         query: "{ faq { id faq faqNum} }",
       });
-      setFaq(response.data.data.movie);
+      setFaq(response.data.data.faq);
     } catch (error) {
       console.log("Error Loading Frequently Asked Questions", error);
     }
