@@ -1,5 +1,3 @@
-import planMainImage from "src/assets/plan-main-image.png";
-
 export function PlanSection() {
   return (
     <section className="max-w-[1920px] w-full mb-[150px]">

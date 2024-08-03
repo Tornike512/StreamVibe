@@ -2,7 +2,7 @@ import { ExploreCategory } from "./ExploreCategory";
 import { FAQSection } from "./FAQSection";
 import { HomeHeader } from "./HomeHeader";
 import { PlanSection } from "./PlanSection";
-import StartPlanSection from "./startPlanSection/StartPlanSection";
+import StartPlanSection from "./StartPlanSection/StartPlanSection";
 import { StreamSection } from "./StreamSection";
 
 export function HomePage() {
