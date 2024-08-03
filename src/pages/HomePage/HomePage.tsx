@@ -1,6 +1,7 @@
 import { ExploreCategory } from "./ExploreCategory";
 import { FAQSection } from "./FAQSection";
 import { HomeHeader } from "./HomeHeader";
+import { PlanSection } from "./PlanSection";
 import { StreamSection } from "./StreamSection";
 
 export function HomePage() {
@@ -10,6 +11,7 @@ export function HomePage() {
       <ExploreCategory />
       <StreamSection />
       <FAQSection />
+      <PlanSection />
     </main>
   );
 }
