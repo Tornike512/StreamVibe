@@ -1,31 +1,45 @@
 export function PlanSection() {
   return (
-    <section>
-      <div>
+    <section className="max-w-[1920px] w-full mb-[150px]">
+      <div className="flex justify-between mb-[80px]">
         <div>
-          <h2>Choose the plan that's right for you</h2>
-          <p>
+          <h2 className="text-[#ffffff] text-[38px] font-bold mb-[14px]">
+            Choose the plan that's right for you
+          </h2>
+          <p className="text-[18px] text-[#999999]">
             Join StreamVibe and select from our flexible subscription options
             tailored to suit your viewing preferences. Get ready for non-stop
             entertainment!
           </p>
         </div>
-        <div>
-          <button>Monthly</button>
-          <button>Yearly</button>
+        <div className="bg-[#0F0F0F] rounded-[12px] flex justify-between items-center p-[16px]">
+          <button className="rounded-[8px] bg-[#1F1F1F] p-[19px] text-[18px] text-[#ffffff]">
+            Monthly
+          </button>
+          <button className="rounded-[8px] p-[19px] text-[#999999] text-[18px] ">
+            Yearly
+          </button>
         </div>
       </div>
-      <ul>
-        <li>
-          <h3>Basic Plan</h3>
-          <p>
+      <ul className="grid grid-cols-[1fr_1fr_1fr] gap-y-[30px]">
+        <li className="rounded-[8px] bg-[#1F1F1F] p-[50px]">
+          <h3 className="text-[#ffffff] text-[24px] font-bold mb-[16px]">
+            Basic Plan
+          </h3>
+          <p className="text-[18px] text-[#999999] mb-[50px]">
             Enjoy an extensive library of movies and shows, featuring a range of
             content, including recently released titles.
           </p>
-          <h2>$9.99/Month</h2>
-          <div>
-            <button>Start Free Trial</button>
-            <button>Choose Plan</button>
+          <h2 className="flex items-end text-[#ffffff] text-[40px] mb-[50px] font-bold">
+            $9.99<p className="text-[18px] text-[#999999]">/Month</p>
+          </h2>
+          <div className="flex items-center justify-between">
+            <button className="w-[45%] bg-[#0F0F0F] rounded-[8px] p-[24px] text-[#ffffff] text-[18px] hover:bg-[#404040]">
+              Start Free Trial
+            </button>
+            <button className="w-[45%] h-fit bg-[#E50000] text-[#ffffff] text-[18px] p-[20px] rounded-[8px] hover:bg-[#FF3333]">
+              Choose Plan
+            </button>
           </div>
         </li>
       </ul>
