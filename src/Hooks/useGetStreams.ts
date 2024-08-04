@@ -8,9 +8,12 @@ export function useGetStreams() {
 
   async function getStreams() {
     try {
-      const response = await axios.post("http://localhost:3000/graphql", {
-        query: "{ stream { id streamTitle image} }",
-      });
+      const response = await axios.post(
+        "https://streamvibe-backend-3.onrender.com/graphql",
+        {
+          query: "{ stream { id streamTitle image} }",
+        }
+      );
       setStreams(response.data.data.stream);
     } catch (error) {
       console.log("Error Loading Streams", error);

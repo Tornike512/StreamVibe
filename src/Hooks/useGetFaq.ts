@@ -8,9 +8,12 @@ export function useGetFaq() {
 
   async function getFaq() {
     try {
-      const response = await axios.post("http://localhost:3000/graphql", {
-        query: "{ faq { id faq faqNum} }",
-      });
+      const response = await axios.post(
+        "https://streamvibe-backend-3.onrender.com/graphql",
+        {
+          query: "{ faq { id faq faqNum} }",
+        }
+      );
       setFaq(response.data.data.faq);
     } catch (error) {
       console.log("Error Loading Frequently Asked Questions", error);

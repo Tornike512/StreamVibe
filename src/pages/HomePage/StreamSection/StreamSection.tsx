@@ -1,7 +1,5 @@
 import { useGetStreams } from "src/Hooks/useGetStreams";
 
-import deviceIcon from "src/assets/Frame.png";
-
 export function StreamSection() {
   const { streams } = useGetStreams();
 
