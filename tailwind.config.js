@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {},
     screens: {
-      "2xl": { max: "1535px" },
+      xxl: { max: "1535px" },
       // => @media (max-width: 1535px) { ... }
 
       xl: { max: "1279px" },
