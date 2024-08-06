@@ -4,9 +4,13 @@ import startWatching from "src/assets/start-watching-icon.svg";
 export function HomeHeader() {
   return (
     <section className="flex justify-center items-center flex-col max-w-[1920px] mb-[200px]">
-      <img src={homeHeaderMainImage} alt="Header Movies Images" />
-      <div className="flex flex-col items-center w-[60%]">
-        <h1 className="text-[#ffffff] text-[58px] font-bold mb-[14px]">
+      <img
+        className="w-full"
+        src={homeHeaderMainImage}
+        alt="Header Movies Images"
+      />
+      <div className="flex flex-col items-center w-[60%] md:w-[80%]">
+        <h1 className="text-center text-[#ffffff] text-[58px] font-bold mb-[14px] md:text-[36px]">
           The Best Streaming Experience
         </h1>
         <p className="text-[#999999] text-[18px] mb-[50px] text-center">
@@ -17,7 +21,7 @@ export function HomeHeader() {
           create your own watchlists, so you can easily find the content you
           want to watch.
         </p>
-        <button className="bg-[#E50000] flex text-[#ffffff] text-[18px] p-[15px] rounded-[8px] hover:bg-[#FF3333]">
+        <button className="bg-[#E50000] flex text-[#ffffff] text-[18px] p-[15px] rounded-[8px] hover:bg-[#FF3333] md:w-full md:flex md:justify-center">
           <img src={startWatching} alt="Start Watching Button icon" />
           Start Watching Now
         </button>
