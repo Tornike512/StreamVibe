@@ -4,7 +4,7 @@ export function StreamSection() {
   const { streams } = useGetStreams();
 
   return (
-    <section className="max-w-[1920px] w-full mb-[150px]">
+    <section className="max-w-[1920px] w-full mb-[150px] px-[40px]">
       <h2 className="text-[#ffffff] text-[38px] font-bold mb-[14px]">
         We Provide you streaming experience across various devices.
       </h2>

@@ -17,7 +17,7 @@ export function SliderButtons() {
   };
 
   const handleSliderPage = (index: number) => {
-    if (index === 0 || index === -101 || index === -202 || index === -303) {
+    if (index === 0 || index === -119 || index === -238 || index === -357) {
       return "#E50000";
     } else {
       return "#404040";
@@ -25,7 +25,7 @@ export function SliderButtons() {
   };
 
   return (
-    <li className="w-[15%] bg-[#0F0F0F] rounded-[12px] flex justify-between items-center p-[16px]">
+    <li className="w-[300px] bg-[#0F0F0F] rounded-[12px] flex justify-between items-center p-[16px]">
       <button
         onClick={handleSlideRight}
         className="rounded-[8px] bg-[#1F1F1F] p-[19px] hover:bg-[#404040]"
@@ -41,19 +41,19 @@ export function SliderButtons() {
       <span
         className={`w-[20px] h-[5px]`}
         style={{
-          backgroundColor: slide === -101 ? handleSliderPage(slide) : "#404040",
+          backgroundColor: slide === -119 ? handleSliderPage(slide) : "#404040",
         }}
       ></span>
       <span
         className={`w-[20px] h-[5px]`}
         style={{
-          backgroundColor: slide === -202 ? handleSliderPage(slide) : "#404040",
+          backgroundColor: slide === -238 ? handleSliderPage(slide) : "#404040",
         }}
       ></span>
       <span
         className={`w-[20px] h-[5px] mr-[10px]`}
         style={{
-          backgroundColor: slide === -303 ? handleSliderPage(slide) : "#404040",
+          backgroundColor: slide === -357 ? handleSliderPage(slide) : "#404040",
         }}
       ></span>
       <button

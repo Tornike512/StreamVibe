@@ -11,14 +11,14 @@ export function Slider() {
 
   return (
     <ul
-      className={`w-[374%] relative  grid grid-cols-[repeat(20,5%)] gap-x-[30px] transition-[left] duration-[0.5s] ease-[ease] delay-[0s]`}
-      style={{ left: `${slide}%` }}
+      className={`w-[374%] relative  grid grid-cols-[repeat(20,5%)] gap-x-[35px] transition-[left] duration-[0.5s] ease-[ease] delay-[0s]`}
+      style={{ left: `${slide}rem` }}
     >
       {movies.map((movie) => {
         return (
           <li
             key={movie.id}
-            className="p-[30px] bg-[#262626] h-[370px] rounded-[12px] cursor-pointer flex flex-col"
+            className="p-[30px] bg-[#262626] h-[370px] xxl:h-[250px] rounded-[12px] cursor-pointer flex flex-col"
           >
             <img
               className="h-[88%] object-cover rounded-[10px]"

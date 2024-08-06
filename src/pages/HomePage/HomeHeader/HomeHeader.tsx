@@ -3,13 +3,13 @@ import startWatching from "src/assets/start-watching-icon.svg";
 
 export function HomeHeader() {
   return (
-    <section className="flex justify-center items-center flex-col max-w-[1920px] mb-[200px]">
+    <section className="flex justify-center items-center flex-col max-w-[1920px] mb-[200px] lg:mb-[100px]">
       <img
         className="w-full"
         src={homeHeaderMainImage}
         alt="Header Movies Images"
       />
-      <div className="flex flex-col items-center w-[60%] md:w-[80%]">
+      <div className="flex flex-col items-center w-[80%]">
         <h1 className="text-center text-[#ffffff] text-[58px] font-bold mb-[14px] md:text-[36px]">
           The Best Streaming Experience
         </h1>

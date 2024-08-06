@@ -3,7 +3,7 @@ import { SliderButtons } from "src/components/SliderButtons";
 
 export function ExploreCategory() {
   return (
-    <section className="max-w-[1920px] w-full mb-[150px]">
+    <section className="max-w-[1920px] w-full mb-[150px] px-[40px] overflow-hidden">
       <ul className="max-w-[1920px] flex justify-between mb-[80px]">
         <li>
           <h2 className="text-[#ffffff] text-[38px] font-bold mb-[14px]">
@@ -16,7 +16,7 @@ export function ExploreCategory() {
         </li>
         <SliderButtons />
       </ul>
-      <div className="w-full overflow-hidden">
+      <div className="w-full">
         <Slider />
       </div>
     </section>

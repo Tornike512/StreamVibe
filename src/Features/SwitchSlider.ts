@@ -14,15 +14,15 @@ export const slideSlice = createSlice({
   initialState,
   reducers: {
     slideLeft: (state) => {
-      state.slide -= 101;
-      if (state.slide < -303) {
+      state.slide -= 119;
+      if (state.slide < -357) {
         state.slide = 0;
       }
     },
     slideRight: (state) => {
-      state.slide += 101;
+      state.slide += 119;
       if (state.slide > 0) {
-        state.slide = -303;
+        state.slide = -357;
       }
     },
   },

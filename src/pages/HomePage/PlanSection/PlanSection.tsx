@@ -1,6 +1,6 @@
 export function PlanSection() {
   return (
-    <section className="max-w-[1920px] w-full mb-[150px]">
+    <section className="max-w-[1920px] w-full mb-[150px] px-[40px]">
       <div className="flex justify-between mb-[80px]">
         <div>
           <h2 className="text-[#ffffff] text-[38px] font-bold mb-[14px]">
