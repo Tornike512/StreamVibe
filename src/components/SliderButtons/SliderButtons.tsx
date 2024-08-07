@@ -17,7 +17,7 @@ export function SliderButtons() {
   };
 
   const handleSliderPage = (index: number) => {
-    if (index === 0 || index === -119 || index === -238 || index === -357) {
+    if (index === 0 || index === -1904 || index === -3808 || index === -5712) {
       return "#E50000";
     } else {
       return "#404040";
@@ -41,19 +41,22 @@ export function SliderButtons() {
       <span
         className={`w-[20px] h-[5px]`}
         style={{
-          backgroundColor: slide === -119 ? handleSliderPage(slide) : "#404040",
+          backgroundColor:
+            slide === -1904 ? handleSliderPage(slide) : "#404040",
         }}
       ></span>
       <span
         className={`w-[20px] h-[5px]`}
         style={{
-          backgroundColor: slide === -238 ? handleSliderPage(slide) : "#404040",
+          backgroundColor:
+            slide === -3808 ? handleSliderPage(slide) : "#404040",
         }}
       ></span>
       <span
         className={`w-[20px] h-[5px] mr-[10px]`}
         style={{
-          backgroundColor: slide === -357 ? handleSliderPage(slide) : "#404040",
+          backgroundColor:
+            slide === -5712 ? handleSliderPage(slide) : "#404040",
         }}
       ></span>
       <button
