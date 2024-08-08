@@ -20,7 +20,15 @@ export function SliderButtons() {
   const slide = useSelector((state: RootState) => state.slide.slide);
 
   const handleSliderPage = (index: number) => {
-    if (index === 0 || index === -1904 || index === -3808 || index === -5712) {
+    if (
+      index === 0 ||
+      index === -1904 ||
+      index === -3808 ||
+      index === -5712 ||
+      index === -1485 ||
+      index === -2970 ||
+      index === -4455
+    ) {
       return "#E50000";
     } else {
       return "#404040";
@@ -45,21 +53,27 @@ export function SliderButtons() {
         className={`w-[20px] h-[5px]`}
         style={{
           backgroundColor:
-            slide === -1904 ? handleSliderPage(slide) : "#404040",
+            slide === -1904 || slide === -1485
+              ? handleSliderPage(slide)
+              : "#404040",
         }}
       ></span>
       <span
         className={`w-[20px] h-[5px]`}
         style={{
           backgroundColor:
-            slide === -3808 ? handleSliderPage(slide) : "#404040",
+            slide === -3808 || slide === -2970
+              ? handleSliderPage(slide)
+              : "#404040",
         }}
       ></span>
       <span
         className={`w-[20px] h-[5px] mr-[10px]`}
         style={{
           backgroundColor:
-            slide === -5712 ? handleSliderPage(slide) : "#404040",
+            slide === -5712 || slide === -4455
+              ? handleSliderPage(slide)
+              : "#404040",
         }}
       ></span>
       <button

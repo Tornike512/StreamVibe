@@ -8,6 +8,7 @@ export function Slider() {
   const { movies } = useGetMovies();
 
   const slide = useSelector((state: RootState) => state.slide.slide);
+  console.log(slide);
 
   return (
     <ul

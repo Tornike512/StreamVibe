@@ -24,7 +24,7 @@ export const slideSlice = createSlice({
         if (state.slide < -5712) {
           state.slide = 0;
         }
-      } else if (width !== null && width < 1485) {
+      } else if (width !== null && width < 1536) {
         state.slide -= 1485;
         if (state.slide < -4455) {
           state.slide = 0;
@@ -38,7 +38,7 @@ export const slideSlice = createSlice({
         if (state.slide > 0) {
           state.slide = -5712;
         }
-      } else if (width !== null && width < 1485) {
+      } else if (width !== null && width < 1536) {
         state.slide += 1485;
         if (state.slide > 0) {
           state.slide = -4455;
