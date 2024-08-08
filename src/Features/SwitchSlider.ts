@@ -25,12 +25,13 @@ export const slideSlice = createSlice({
           state.slide = 0;
         }
       } else if (width !== null && width < 1536) {
-        state.slide -= 1485;
-        if (state.slide < -4455) {
-          state.slide = 0;
+        state.slide -= 1522;
+        if (state.slide < -4566) {
+          state.slide = -27;
         }
       }
     },
+
     slideRight: (state, action: PayloadAction<SlidePayload>) => {
       const { width } = action.payload;
       if (width !== null && width > 1536) {
@@ -39,9 +40,9 @@ export const slideSlice = createSlice({
           state.slide = -5712;
         }
       } else if (width !== null && width < 1536) {
-        state.slide += 1485;
-        if (state.slide > 0) {
-          state.slide = -4455;
+        state.slide += 1522;
+        if (state.slide > -27) {
+          state.slide = -4566;
         }
       }
     },

@@ -12,7 +12,7 @@ export function Slider() {
 
   return (
     <ul
-      className={`w-[374%] relative  grid grid-cols-[repeat(20,345px)] gap-x-[35px] transition-[left] duration-[0.5s] ease-[ease] delay-[0s] xxl:grid-cols-[repeat(20,260px)]`}
+      className={`w-[374%] relative  grid grid-cols-[repeat(20,5%)] gap-x-[35px] transition-[left] duration-[0.5s] ease-[ease] delay-[0s]`}
       style={{ left: `${slide}px` }}
     >
       {movies.map((movie) => {
