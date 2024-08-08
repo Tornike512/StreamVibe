@@ -1,8 +1,12 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import type { RootState } from "src/Redux/store";
 
 interface slideState {
   slide: number;
+}
+
+interface SlidePayload {
+  width: number | null;
 }
 
 const initialState: slideState = {
@@ -13,16 +17,32 @@ export const slideSlice = createSlice({
   name: "slide",
   initialState,
   reducers: {
-    slideLeft: (state) => {
-      state.slide -= 1904;
-      if (state.slide < -5712) {
-        state.slide = 0;
+    slideLeft: (state, action: PayloadAction<SlidePayload>) => {
+      const { width } = action.payload;
+      if (width !== null && width > 1536) {
+        state.slide -= 1904;
+        if (state.slide < -5712) {
+          state.slide = 0;
+        }
+      } else if (width !== null && width < 1485) {
+        state.slide -= 1485;
+        if (state.slide < -4455) {
+          state.slide = 0;
+        }
       }
     },
-    slideRight: (state) => {
-      state.slide += 1904;
-      if (state.slide > 0) {
-        state.slide = -5712;
+    slideRight: (state, action: PayloadAction<SlidePayload>) => {
+      const { width } = action.payload;
+      if (width !== null && width > 1536) {
+        state.slide += 1904;
+        if (state.slide > 0) {
+          state.slide = -5712;
+        }
+      } else if (width !== null && width < 1485) {
+        state.slide += 1485;
+        if (state.slide > 0) {
+          state.slide = -4455;
+        }
       }
     },
   },

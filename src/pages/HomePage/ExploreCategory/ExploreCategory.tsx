@@ -16,7 +16,7 @@ export function ExploreCategory() {
         </li>
         <SliderButtons />
       </ul>
-      <div className="w-full">
+      <div>
         <Slider />
       </div>
     </section>

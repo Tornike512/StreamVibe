@@ -1,20 +1,23 @@
 import { useSelector, useDispatch } from "react-redux";
 import { RootState, AppDispatch } from "src/Redux/store";
+import { useWindowSize } from "@uidotdev/usehooks";
 import { slideLeft, slideRight } from "src/Features/SwitchSlider";
+
 import leftArrow from "src/assets/left-arrow.png";
 import rightArrow from "src/assets/right-arrow.png";
 
 export function SliderButtons() {
-  const dispatch: AppDispatch = useDispatch();
-  const slide = useSelector((state: RootState) => state.slide.slide);
+  const { width } = useWindowSize();
 
   const handleSlideLeft = () => {
-    dispatch(slideLeft());
+    dispatch(slideLeft({ width }));
   };
 
   const handleSlideRight = () => {
-    dispatch(slideRight());
+    dispatch(slideRight({ width }));
   };
+  const dispatch: AppDispatch = useDispatch();
+  const slide = useSelector((state: RootState) => state.slide.slide);
 
   const handleSliderPage = (index: number) => {
     if (index === 0 || index === -1904 || index === -3808 || index === -5712) {
