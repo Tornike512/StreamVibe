@@ -2,13 +2,12 @@ import { useSelector, useDispatch } from "react-redux";
 import { RootState, AppDispatch } from "src/Redux/store";
 import { useWindowSize } from "@uidotdev/usehooks";
 import { slideLeft, slideRight } from "src/Features/SwitchSlider";
-import { handleSliderPage } from "src/utils/handleSliderPage";
 
 import leftArrow from "src/assets/left-arrow.png";
 import rightArrow from "src/assets/right-arrow.png";
 
 export function SliderButtons() {
-  const { width } = useWindowSize();
+  const { width = 0 } = useWindowSize();
 
   const handleSlideLeft = () => {
     dispatch(slideLeft({ width }));
@@ -38,19 +37,22 @@ export function SliderButtons() {
       <span
         className={`w-[20px] h-[5px]`}
         style={{
-          backgroundColor: slide === -width ? "#E50000" : "#404040",
+          backgroundColor:
+            slide === -width || slide === -1904 ? "#E50000" : "#404040",
         }}
       ></span>
       <span
         className={`w-[20px] h-[5px]`}
         style={{
-          backgroundColor: slide === -width * 2 ? "#E50000" : "#404040",
+          backgroundColor:
+            slide === -width * 2 || slide === -3808 ? "#E50000" : "#404040",
         }}
       ></span>
       <span
         className={`w-[20px] h-[5px] mr-[10px]`}
         style={{
-          backgroundColor: slide === -width * 3 ? "#E50000" : "#404040",
+          backgroundColor:
+            slide === -width * 3 || slide === -5712 ? "#E50000" : "#404040",
         }}
       ></span>
       <button
