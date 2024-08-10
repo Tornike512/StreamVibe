@@ -17,11 +17,9 @@ export function SliderButtons() {
   const handleSlideRight = () => {
     dispatch(slideRight({ width }));
   };
+
   const dispatch: AppDispatch = useDispatch();
   const slide = useSelector((state: RootState) => state.slide.slide);
-  console.log(width, "width");
-
-  console.log(handleSliderPage(slide));
 
   return (
     <li className="w-[300px] h-[100px] bg-[#0F0F0F] rounded-[12px] flex justify-between items-center p-[16px]">
@@ -34,35 +32,25 @@ export function SliderButtons() {
       <span
         className={`w-[20px] h-[5px] ml-[10px]`}
         style={{
-          backgroundColor:
-            slide === 0 || slide === -27 ? handleSliderPage(slide) : "#404040",
+          backgroundColor: slide === 0 ? "#E50000" : "#404040",
         }}
       ></span>
       <span
         className={`w-[20px] h-[5px]`}
         style={{
-          backgroundColor:
-            slide === -1904 || slide === -1549
-              ? handleSliderPage(slide)
-              : "#404040",
+          backgroundColor: slide === -width ? "#E50000" : "#404040",
         }}
       ></span>
       <span
         className={`w-[20px] h-[5px]`}
         style={{
-          backgroundColor:
-            slide === -3808 || slide === -3071
-              ? handleSliderPage(slide)
-              : "#404040",
+          backgroundColor: slide === -width * 2 ? "#E50000" : "#404040",
         }}
       ></span>
       <span
         className={`w-[20px] h-[5px] mr-[10px]`}
         style={{
-          backgroundColor:
-            slide === -5712 || slide === -4566
-              ? handleSliderPage(slide)
-              : "#404040",
+          backgroundColor: slide === -width * 3 ? "#E50000" : "#404040",
         }}
       ></span>
       <button
