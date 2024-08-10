@@ -19,6 +19,9 @@ export function SliderButtons() {
   };
   const dispatch: AppDispatch = useDispatch();
   const slide = useSelector((state: RootState) => state.slide.slide);
+  console.log(width, "width");
+
+  console.log(handleSliderPage(slide));
 
   return (
     <li className="w-[300px] h-[100px] bg-[#0F0F0F] rounded-[12px] flex justify-between items-center p-[16px]">
