@@ -21,7 +21,7 @@ export function SliderButtons() {
   const slide = useSelector((state: RootState) => state.slide.slide);
 
   return (
-    <li className="w-[300px] h-[100px] bg-[#0F0F0F] rounded-[12px] flex justify-between items-center p-[16px]">
+    <li className="w-[300px] h-[100px] bg-[#0F0F0F] rounded-[12px] flex justify-between items-center p-[16px] lg:hidden">
       <button
         onClick={handleSlideRight}
         className="rounded-[8px] bg-[#1F1F1F] p-[19px] hover:bg-[#404040]"
