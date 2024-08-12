@@ -18,7 +18,7 @@ export function Slider() {
         return (
           <li
             key={movie.id}
-            className="p-[30px] bg-[#262626] h-[370px] xxl:h-[250px] lg:h-[370px] rounded-[12px] cursor-pointer flex flex-col"
+            className="p-[30px] bg-[#262626] h-[370px] xxl:h-[250px] lg:h-[370px] rounded-[12px] cursor-pointer flex flex-col md:h-[250px]"
           >
             <img
               className="h-[88%] object-cover rounded-[10px]"
