@@ -5,16 +5,16 @@ export function StreamSection() {
 
   return (
     <section className="max-w-[1920px] w-full mb-[150px] px-[40px]">
-      <h2 className="text-[#ffffff] text-[38px] font-bold mb-[14px]">
+      <h2 className="text-[#ffffff] text-[38px] font-bold mb-[14px] lg:flex lg:text-center lg:justify-center md:text-[32px]">
         We Provide you streaming experience across various devices.
       </h2>
-      <p className="text-[18px] text-[#999999] mb-[80px]">
+      <p className="text-[18px] text-[#999999] mb-[80px] lg:flex lg:text-center lg:justify-center">
         With StreamVibe, you can enjoy your favorite movies and TV shows
         anytime, anywhere. Our platform is designed to be compatible with a wide
         range of devices, ensuring that you never miss a moment of
         entertainment.
       </p>
-      <div className="grid grid-cols-[1fr_1fr_1fr] gap-x-[60px] gap-y-[60px]">
+      <div className="grid grid-cols-[1fr_1fr_1fr] gap-x-[60px] gap-y-[60px] xl:gap-x-[30px] xl:gap-y-[30px] xl:grid-cols-[1fr_1fr] md:grid-cols-[1fr]">
         {streams.map((stream) => {
           return (
             <ul
