@@ -7,19 +7,19 @@ export function FAQSection() {
     <section className="max-w-[1920px] w-full mb-[150px] px-[40px]">
       <div className="flex justify-between mb-[80px]">
         <div>
-          <h2 className="text-[#ffffff] text-[38px] font-bold mb-[14px]">
+          <h2 className="text-[#ffffff] text-[38px] font-bold mb-[14px] lg:flex lg:text-center lg:justify-center md:text-[32px]">
             Frequently Asked Questions
           </h2>
-          <p className="text-[18px] text-[#999999]">
+          <p className="text-[18px] text-[#999999] lg:flex lg:text-center lg:justify-center">
             Got questions? We've got answers! Check out our FAQ section to find
             answers to the most common questions about StreamVibe.
           </p>
         </div>
-        <button className="h-fit bg-[#E50000] flex text-[#ffffff] text-[18px] p-[20px] rounded-[8px] hover:bg-[#FF3333]">
+        <button className="h-fit bg-[#E50000] flex text-[#ffffff] text-[18px] p-[20px] rounded-[8px] hover:bg-[#FF3333] xl:hidden">
           Ask a Question
         </button>
       </div>
-      <ul className="grid grid-cols-[1fr_1fr] gap-x-[50px]">
+      <ul className="grid grid-cols-[1fr_1fr] gap-x-[50px] md:grid-cols-[1fr]">
         {faq.map((question) => {
           return (
             <li
