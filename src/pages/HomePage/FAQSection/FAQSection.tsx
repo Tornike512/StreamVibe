@@ -4,7 +4,7 @@ export function FAQSection() {
   const { faq } = useGetFaq();
 
   return (
-    <section className="max-w-[1920px] w-full mb-[150px] px-[40px]">
+    <section className="max-w-[1920px] w-full mb-[150px] px-[40px] lg:mb-[100px]">
       <div className="flex justify-between mb-[80px]">
         <div>
           <h2 className="text-[#ffffff] text-[38px] font-bold mb-[14px] lg:flex lg:text-center lg:justify-center md:text-[32px]">

@@ -2,7 +2,7 @@ import planMainImage from "src/assets/plan-main-image.png";
 
 export function StartPlanSection() {
   return (
-    <section className="flex justify-center relative w-full max-w-[1920px] mb-[150px] px-[40px]">
+    <section className="flex justify-center relative w-full max-w-[1920px] mb-[150px] px-[40px] lg:mb-[100px]">
       <img
         className="w-[-webkit-fill-available] lg:h-[400px] lg:object-cover"
         src={planMainImage}
