@@ -7,17 +7,22 @@ import leftArrow from "src/assets/left-arrow.png";
 import rightArrow from "src/assets/right-arrow.png";
 
 export function SliderButtons() {
-  const { width = 0 } = useWindowSize();
+  const { width } = useWindowSize();
+
+  const dispatch: AppDispatch = useDispatch();
 
   const handleSlideLeft = () => {
-    dispatch(slideLeft({ width }));
+    if (width) {
+      dispatch(slideLeft({ width: width as number }));
+    }
   };
 
   const handleSlideRight = () => {
-    dispatch(slideRight({ width }));
+    if (width) {
+      dispatch(slideRight({ width: width as number }));
+    }
   };
 
-  const dispatch: AppDispatch = useDispatch();
   const slide = useSelector((state: RootState) => state.slide.slide);
 
   return (
@@ -38,21 +43,27 @@ export function SliderButtons() {
         className={`w-[20px] h-[5px]`}
         style={{
           backgroundColor:
-            slide === -width || slide === -1904 ? "#E50000" : "#404040",
+            slide === -(width as number) || slide === -1904
+              ? "#E50000"
+              : "#404040",
         }}
       ></span>
       <span
         className={`w-[20px] h-[5px]`}
         style={{
           backgroundColor:
-            slide === -width * 2 || slide === -3808 ? "#E50000" : "#404040",
+            slide === -(width as number) * 2 || slide === -3808
+              ? "#E50000"
+              : "#404040",
         }}
       ></span>
       <span
         className={`w-[20px] h-[5px] mr-[10px]`}
         style={{
           backgroundColor:
-            slide === -width * 3 || slide === -5712 ? "#E50000" : "#404040",
+            slide === -(width as number) * 3 || slide === -5712
+              ? "#E50000"
+              : "#404040",
         }}
       ></span>
       <button
