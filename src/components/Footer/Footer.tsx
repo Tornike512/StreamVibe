@@ -6,7 +6,7 @@ export function Footer() {
   return (
     <>
       <footer className="flex justify-center bg-[#0F0F0F]">
-        <div className="max-w-[1920px] px-[162px] py-[100px] w-full flex justify-between items-start">
+        <div className="max-w-[1920px] px-[162px] py-[100px] w-full flex justify-between items-start xl:px-[70px] lg:grid lg:grid-cols-[1fr_1fr_1fr] lg:gap-y-10 md:grid-cols-[1fr_1fr] md:px-[40px]">
           <ul>
             <h4 className="text-[#ffffff] text-[20px] font-bold mb-[24px]">
               Home
@@ -107,8 +107,8 @@ export function Footer() {
           </figure>
         </div>
       </footer>
-      <div className="bg-[#0F0F0F] flex items-center justify-center text-[18px] text-[#999999]">
-        <div className="max-w-[1920px] w-full flex justify-between px-[162px] py-[20px] border-t-[#999999] border-t">
+      <div className="bg-[#0F0F0F] flex items-center justify-center text-[18px] text-[#999999] lg:flex-col lg:items-center">
+        <div className="max-w-[1920px] w-full flex justify-between px-[162px] py-[20px] border-t-[#999999] border-t lg:px-[40px]">
           <p>@Built By Tornike Tsagareishvili</p>
           <div className="flex">
             <p className="border-r-[#999999] border-r border-solid px-[10px] cursor-pointer hover:underline">
