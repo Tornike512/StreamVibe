@@ -22,7 +22,7 @@ export function PlanSection() {
         </div>
       </div>
       <ul className="grid grid-cols-[1fr_1fr_1fr] gap-x-[30px] lg:grid-cols-[1fr] lg:gap-y-[30px]">
-        <li className="rounded-[12px] bg-[#1F1F1F] p-[50px] xxl:p-[25px] flex flex-col justify-between h-[450px]">
+        <li className="rounded-[12px] bg-[#1F1F1F] p-[50px] xxl:p-[25px] flex flex-col justify-between h-[450px] lg:h-fit">
           <h3 className="text-[#ffffff] text-[24px] font-bold mb-[16px] lg:flex lg:text-center lg:justify-center">
             Basic Plan
           </h3>
@@ -42,7 +42,7 @@ export function PlanSection() {
             </button>
           </div>
         </li>
-        <li className="rounded-[12px] bg-[#1F1F1F] p-[50px] xxl:p-[25px] flex flex-col justify-between h-[450px]">
+        <li className="rounded-[12px] bg-[#1F1F1F] p-[50px] xxl:p-[25px] flex flex-col justify-between h-[450px] lg:h-fit">
           <h3 className="text-[#ffffff] text-[24px] font-bold mb-[16px] lg:flex lg:text-center lg:justify-center">
             Standard Plan
           </h3>
@@ -62,7 +62,7 @@ export function PlanSection() {
             </button>
           </div>
         </li>
-        <li className="rounded-[12px] bg-[#1F1F1F] p-[50px] xxl:p-[25px] flex flex-col justify-between h-[450px]">
+        <li className="rounded-[12px] bg-[#1F1F1F] p-[50px] xxl:p-[25px] flex flex-col justify-between h-[450px] lg:h-fit">
           <h3 className="text-[#ffffff] text-[24px] font-bold mb-[16px] lg:flex lg:text-center lg:justify-center">
             Premium Plan
           </h3>
